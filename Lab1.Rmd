@@ -1,0 +1,91 @@
+---
+title: "R Notebook"
+output:
+  word_document: default
+  html_notebook: default
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+#Лабораторна робота №1
+Проаналізувати перегляди відеоресурсу
+
+#Laboratory work 1
+Analyze video views tendency
+
+```{r}
+x<-c(175,178,172,175,175,180,165,178,186,175,172,175,175,165,186,180,180,178,172,180)
+
+sort(x)
+rank(x)
+```
+
+```{r}
+xi <- unique(x)
+
+xi
+```
+
+## Виводимо показники вибірки
+
+```{r}
+min(x)
+```
+
+```{r}
+max(x)
+```
+
+## Середнє арифметичне
+
+```{r}
+mean(x)
+```
+
+## Медіана
+
+```{r}
+median(x)
+```
+
+## Середнє відхилення
+
+```{r}
+sd(x)
+```
+
+## Коефіцієнт варіації
+
+```{r}
+var(x)
+```
+
+## Квантілі
+
+```{r}
+quantile(x)
+```
+
+## Коефіцієнт квантілей
+
+```{r}
+IQR(x)
+```
+
+```{r}
+plot(x, main="Simple Plot by index")
+```
+
+```{r}
+boxplot(x, main="Boxplot")
+```
+
+```{r}
+hist(x, main="Histogram")
+```
+
+```{r}
+h_p <- hist(xi,main="Histogram with Poligons")
+lines(h_p$counts ~ h_p$mids, col="blue")
+```
+
